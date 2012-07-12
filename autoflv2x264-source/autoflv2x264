@@ -8,7 +8,7 @@ for file in $(find -maxdepth 1 -mindepth 1 -iname '*.flv'); do
 	# find flv bitrate for video and audio
 	vkbps=$(perl -e "print $(mediainfo --inform="Video;%BitRate%" "${file}") / 1000")
 	akbps=$(perl -e "print $(mediainfo --inform="Audio;%BitRate%" "${file}") / 1000")
-	outputname="${file%.*}.mkv"
+	outputname="${file%.*}.mp4"
 
 	echo filename is ${file}
 	echo videobit rate set to ${vkbps}
